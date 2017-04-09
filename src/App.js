@@ -25,6 +25,7 @@ class App extends React.Component {
         <Examples.PropsExample text="This text overwrites!" />
         <Examples.NestedComponents />
         <Examples.ConditionalRender />
+        <Examples.MultiRender />
         <Examples.StateExample />
         <Examples.UpdateState />
         <Examples.SharedState />
