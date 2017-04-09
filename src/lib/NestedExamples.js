@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const Hearts = (props) => { return <span>&hearts;</span>};
 const Button = (props) => { return <button>{props.children}</button> };
 class NestedComponents extends React.Component {
@@ -11,4 +9,5 @@ class NestedComponents extends React.Component {
     )
   }
 }
+
 export { NestedComponents };
