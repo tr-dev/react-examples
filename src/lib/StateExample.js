@@ -32,4 +32,44 @@ class UpdateState extends React.Component {
     )
   }
 }
-export { StateExample, UpdateState };
+
+class SharedState extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sharedDisplay : "Shared Text"
+    }
+  }
+  update(e) {
+    this.setState({
+      sharedDisplay: e.target.value
+    })
+  }
+  render() {
+    return (
+      <div>
+        <p>Shared State Part 1: <SubShareClass sharedDisplay={this.state.sharedDisplay} updateShared={this.update.bind(this)} /></p>
+        <p>Shared State Part 2: <SubShareClass sharedDisplay={this.state.sharedDisplay} updateShared={this.update.bind(this)} /></p>
+      </div>
+    )
+  }
+}
+
+class SubShareClass extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <span>
+        <input
+          type="text"
+          value={this.props.sharedDisplay}
+          onChange={this.props.updateShared}
+        />
+      </span>
+    )
+  }
+}
+
+export { StateExample, UpdateState, SharedState };
