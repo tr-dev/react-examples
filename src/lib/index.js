@@ -6,3 +6,4 @@ export * from './MountExample';
 export * from './NestedExamples';
 export * from './ConditionalRenderExample';
 export * from './MultiRenderExample';
+export * from './ShouldCompUpdateExample';

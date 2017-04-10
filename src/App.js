@@ -34,6 +34,7 @@ class App extends React.Component {
         <Examples.DefaultEvents />
         <Examples.RefsExample />
         <Examples.MountExample />
+        <Examples.ShouldCompUpdate />
       </div>
     )
   }
